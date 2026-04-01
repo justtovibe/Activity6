@@ -1,0 +1,284 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(190, 190, 190);
+}
+
+.header{
+    background-image: url(jfc.jpg);
+    width: 100%; 
+    height: 300px;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header h1{
+    
+    font-size: 40px;
+    margin: 0;
+}
+
+.header h2{
+    margin: 0;
+}
+
+#nav{
+    width: 100%; 
+    background-color: rgb(163, 58, 58);
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+#nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+#nav a:hover{
+    text-decoration: underline;
+}
+
+.main{
+    background-image: url(jfcpic.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%; 
+    height: 500px;
+    border: 5px solid black;
+    color: rgb(243, 149, 149);
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.footer{
+    width: 90%; 
+    min-height: 40px;
+    border: 3px solid black;
+    background-color: rgb(235, 176, 176);
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenities{
+    padding: 160px 5%;
+    background: rgb(1, 88, 169);
+    color: aliceblue;
+}
+
+.amenities h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+.amenities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.amenity-card{
+    background: rgb(255, 81, 81);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.rooms{
+    padding: 40px 10%;
+    background: lightblue;
+}
+
+.rooms h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+.rooms-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.room-card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.room-card img{
+    width: 100%;
+    display: block;
+}
+
+.room-card p{
+    padding: 10px;
+    margin: 0;
+}
+
+.room-card:hover{
+    transform: translateY(-5px);
+}
+
+.about{
+    background: #dc3545;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.about a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.about a:hover{
+    text-decoration: underline;
+}
+
+.booking-form {
+    background: #dc3545;
+    color: white;
+    padding: 80px 5%;
+}
+
+.booking-form h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(201, 36, 36, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: #333;
+}
+
+input:focus, select:focus {
+    outline: 3px solid #3264c1;
+    box-shadow: 0 0 5px rgba(50, 100, 193, 0.5);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #3264c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background: #1e4a8f;
+    transform: scale(1.02);
+    outline: 2px solid white;
+}
+
+/* Contacts Section */
+.contacts {
+    padding: 80px 5%;
+    background: #5b729b;
+    color: white;
+}
+
+.contacts h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contacts-card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.contacts-card h4 {
+    color: #5b729b;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.contacts-card a {
+    color: #3264c1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacts-card a:hover,
+.contacts-card a:focus {
+    color: #1e4a8f;
+    text-decoration: underline;
+}
+
+.location{
+    text-align: center;
+    
+}
