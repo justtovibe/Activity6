@@ -1,0 +1,400 @@
+:root {
+    --sea: #0b7285;
+    --lagoon: #14b8a6;
+    --sand: #f4ead5;
+    --palm: #2f5d50;
+    --sunset: #ef7c54;
+    --text-dark: #16303a;
+    --text-light: #f7fbfb;
+    --surface: #ffffff;
+    --shadow: 0 12px 28px rgba(15, 34, 43, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(rgba(5, 30, 37, 0.64), rgba(5, 30, 37, 0.64)), url("images/siargao_island.png") center/cover fixed;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.header {
+    min-height: 320px;
+    color: var(--text-light);
+    background: linear-gradient(rgba(8, 40, 52, 0.58), rgba(8, 40, 52, 0.42)), url("images/jfc.jpg") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4.5vw, 3.3rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 500;
+}
+
+#nav {
+    width: min(1040px, 94%);
+    margin: -28px auto 0;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#nav a {
+    color: var(--sea);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    display: inline-block;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#nav a:hover,
+#nav a:focus {
+    background: var(--sea);
+    color: var(--text-light);
+}
+
+.main {
+    width: min(1040px, 94%);
+    height: min(680px, 72vh);
+    margin: 22px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.footer {
+    width: min(1040px, 94%);
+    min-height: 52px;
+    margin: 0 auto 26px;
+    border-radius: 14px;
+    background: rgba(13, 67, 79, 0.9);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    padding: 0 14px;
+}
+
+.amenities,
+.rooms,
+.booking-form,
+.contacts {
+    padding: 52px 7%;
+}
+
+.amenities {
+    background: linear-gradient(rgba(5, 49, 57, 0.7), rgba(5, 49, 57, 0.7)), url("images/jfcpic.jpg") center/cover;
+    color: var(--text-light);
+}
+
+.amenities h2,
+.rooms h1,
+.about-me h1,
+.booking-form h2,
+.contacts h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.amenities-grid,
+.rooms-grid,
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.amenity-card,
+.room-card,
+.contacts-card {
+    background: var(--surface);
+    color: var(--text-dark);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.amenity-card {
+    border-top: 5px solid var(--lagoon);
+}
+
+.amenity-card:hover,
+.room-card:hover,
+.contacts-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 26px rgba(15, 34, 43, 0.2);
+}
+
+.rooms {
+    background: linear-gradient(to bottom right, #eef9f8, #d8f1ec);
+}
+
+.room-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.room-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.room-card p {
+    padding: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.about {
+    display: none;
+}
+
+.about-me {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.93), rgba(244, 234, 213, 0.93));
+    margin: 36px auto 24px;
+    width: min(900px, 92%);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.about-me h1 {
+    color: var(--sea);
+}
+
+.about-me p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.profile-photo {
+    width: min(220px, 70vw);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(20, 184, 166, 0.55);
+    box-shadow: 0 10px 24px rgba(12, 41, 52, 0.24);
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.booking-form {
+    background: transparent;
+    color: var(--text-dark);
+}
+
+form {
+    max-width: 680px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.93);
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--palm);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #c6d8d5;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+    color: #22353d;
+}
+
+input:focus,
+select:focus {
+    outline: 3px solid rgba(20, 184, 166, 0.25);
+    border-color: var(--lagoon);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(to right, var(--lagoon), var(--sea));
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    opacity: 0.92;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.contacts {
+    background: linear-gradient(155deg, rgba(13, 67, 79, 0.95), rgba(47, 93, 80, 0.92));
+    color: var(--text-light);
+}
+
+.contacts-card h4 {
+    color: var(--sea);
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.contacts-card a {
+    color: var(--sea);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacts-card a:hover,
+.contacts-card a:focus {
+    text-decoration: underline;
+}
+
+.location {
+    color: var(--text-light);
+    text-align: center;
+}
+
+iframe {
+    border: none;
+}
+
+iframe[src*="google.com/maps"] {
+    width: min(1100px, 94%);
+    border-radius: 12px;
+    margin: 10px auto 28px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .header {
+        min-height: 260px;
+        padding: 18px 12px 30px;
+    }
+
+    #nav {
+        width: 92%;
+        margin-top: -18px;
+        border-radius: 14px;
+        padding: 10px 8px;
+    }
+
+    #nav a {
+        flex: 1 1 30%;
+        min-width: 100px;
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .main {
+        height: 68vh;
+        min-height: 420px;
+        margin: 16px auto;
+    }
+
+    .amenities,
+    .rooms,
+    .booking-form,
+    .contacts {
+        padding: 40px 5%;
+    }
+
+    .about-me {
+        padding: 22px;
+        margin: 26px auto 20px;
+        text-align: center;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .contacts-grid {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        min-height: 220px;
+    }
+
+    .header h1 {
+        letter-spacing: 1px;
+    }
+
+    #nav a {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .main {
+        height: 65vh;
+        min-height: 380px;
+    }
+
+    .footer {
+        font-size: 0.86rem;
+        line-height: 1.4;
+        padding: 8px 12px;
+    }
+
+    .profile-photo {
+        width: min(170px, 62vw);
+    }
+
+    .booking-form h2,
+    .contacts h2,
+    .rooms h1,
+    .amenities h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+         <div class="about"></div>
+
+         <div class="about-me">
+            <img src="images/naong nako.png" alt="Photo of Ceejhay King B. Camingue" class="profile-photo">
+            <h1>Ceejhay King B. Camingue</h1>
+            <p>
+                The JFC building is my grandparent's business in Siargao(Surigao Del Norte) and it was built on August 8, 2017. JFC building is a hostel located at the heart of General Luna, Siargao. It is a 3-storey building with 8 rooms and 8 bathrooms. It is a perfect place for those who want to experience the beauty of Siargao.
+            </p>
+         </div>
+
+            <section class="booking-form" id="booking">
+        <h2>Book Your Stay</h2>
+            <form action="#" method="POST" id="bookingForm">
+                
+                <div class="form-group">
+                    <label for="checkin">Check In Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checkout">Check Out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="">Select a room type</option>
+                        <option value="barkada">Barkada Room 1 (10 people)</option>
+                        <option value="family">Barkada Room 2 (6 people)</option>
+                        <option value="family2">Barkada Room 3 (5 people)</option>
+                        <option value="barkada">Family Room 1 (10 people)</option>
+                        <option value="family">Family Room 2 (6 people)</option>
+                        <option value="family2">Family Room 3 (5 people)</option>
+            </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <a href="rooms.html"></a>
+                <button type="submit" class="submit-btn">Check Availability</button>
+                
+        </form>
+    </section>
+
+    <section class="contacts" id="contacts">
+            <h2>Contact Information</h2>
+<div class="contacts-grid">
+<div class="contacts-card">
+    <h4>Phone Number:</h4>
+                    <p><a href="tel:+639684119834">09684119834</a></p>
+    </div>
+                
+    <div class="contacts-card">
+          <h4>Email:</h4>
+                    <a href="mailto:ceejhay.camingue@gmail.com" target="_blank" rel="noopener noreferrer">
+          ceejhay.camingue@gmail.com
+            </a>
+            </div>
+
+            <div class="contacts-card">
+                <h4>Facebook Page:</h4>
+                    <a href="https://www.facebook.com/JFCjebb" target="_blank" rel="noopener noreferrer">
+                        JFC Building Facebook
+                </a>
+                </div>
+            </div>
+    </section>
+
+    
+     <h2 class="location">Location</h2>
+            <p class="location">We are located at JFC Building, Siargao.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.628553028963!2d126.1529585!3d9.7823652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f79208a53c5f%3A0x2151bfcecc051e43!2sJFC%20Commercial%20Center!5e0!3m2!1sen!2sph!4v1700000000000"
+                width="100%"
+                height="300"
+                ></iframe>
+
+    </body>
+</html>
